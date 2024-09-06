@@ -1,8 +1,9 @@
 import {
   defineConfig,
-  presetUno,
   presetAttributify,
   presetIcons,
+  presetUno,
+  transformerAttributifyJsx,
 } from 'unocss';
 
 export default defineConfig({
@@ -11,4 +12,5 @@ export default defineConfig({
     presetAttributify(),
     presetIcons(),
   ],
+  transformers: [transformerAttributifyJsx()],
 });
