@@ -29,7 +29,7 @@ export default function LoginForm() {
     !!loginParams?.username,
   );
 
-  const afterLoginSuccess = () => {
+  const afterLogin = () => {
     if (rememberPassword) {
       setLoginPrams(loginForm.getFieldsValue());
     } else {
@@ -40,7 +40,7 @@ export default function LoginForm() {
   const login = async (params) => {
     try {
       await runAsync(params);
-      afterLoginSuccess();
+      afterLogin();
     } catch (err) {
       console.log(err.message);
     }
